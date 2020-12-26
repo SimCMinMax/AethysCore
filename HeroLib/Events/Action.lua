@@ -107,7 +107,7 @@ local ButtonByAddOn = {
 } -- { [AddOn] = { [BarIndex] = { [1] = ButtonBaseName, [2] = CommandNameFormat } } }
 
 local function GetBarInfo(ActionSlot)
-  local PreviousBarIndex = mathfloor(ActionSlot / 12)
+  local PreviousBarIndex = mathfloor((ActionSlot-1) / 12)
   local BarIndex = mathceil(ActionSlot / 12)
   local ActionSlotOffset = PreviousBarIndex * 12
   local BarSlot = ActionSlot - ActionSlotOffset
